@@ -1,5 +1,6 @@
 const express = require('express') ; 
 const dbConnect = require('./config/dbConnect');
+const cloudinaryConnect = require('./config/cloudinaryConnect') ; 
 require('dotenv').config() ; 
 
 const app = express() ; 
@@ -13,7 +14,7 @@ app.get('/' , async(req , res) => {
 
 // database connnection 
 dbConnect() ; 
-
+cloudinaryConnect() ; 
 
 app.listen(PORT || 8000 , ()=> {
     console.log(`server is listening on port : ${PORT}`) ; 
