@@ -14,6 +14,7 @@ app.get('/' , async(req , res) => {
 
 // database connnection 
 dbConnect() ; 
+// cloudinary connection 
 cloudinaryConnect() ; 
 
 app.listen(PORT || 8000 , ()=> {
