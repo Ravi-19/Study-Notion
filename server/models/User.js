@@ -30,6 +30,14 @@ const userSchema = new mongoose.Schema({
         required: true,
         ref: "Profile",
     },
+    active: {
+        type: Boolean,
+        default: true,
+    },
+    approved: {
+        type: Boolean,
+        default: true,
+    },
     courses: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -40,11 +48,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    token :{
-        type:String,
+    token: {
+        type: String,
     },
     resetPasswordExpires: {
-        type:Date,
+        type: Date,
     },
     courseProgress: [
         {
@@ -53,6 +61,8 @@ const userSchema = new mongoose.Schema({
         }
     ],
 
-});
+},
+    { timestamps: true }
+);
 
 module.exports = mongoose.model("User", userSchema);

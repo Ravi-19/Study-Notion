@@ -101,3 +101,11 @@ exports.getAllUserDetails = async (req, res) => {
         });
     }
 }
+
+exports.updateDisplayPicture = async(req , res) => {
+
+}
+
+exports.getEnrolledCourses = async (req , res) => {
+    
+}
